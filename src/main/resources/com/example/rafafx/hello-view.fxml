@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.VBox?>
+
+
+<?import com.jfoenix.controls.JFXTextArea?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.rafafx.HelloController">
+    <top>
+        <VBox alignment="CENTER_LEFT" spacing="5" style="-fx-background-color: #f0f0f0;">
+            <TextField fx:id="searchField" promptText="Search posts..." prefHeight="40" style="-fx-background-radius: 20;">
+
+
+
+            </TextField>
+        <JFXTextArea fx:id="textArea" editable="false" prefHeight="50" prefWidth="200" maxWidth="200" wrapText="true" onMouseClicked="#openInsertPostWindow" />
+
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+        <VBox fx:id="postContainer" alignment="TOP_CENTER" spacing="10"/>
+        </ScrollPane>
+    </center>
+</BorderPane>
